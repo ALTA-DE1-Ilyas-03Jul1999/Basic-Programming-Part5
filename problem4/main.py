@@ -1,5 +1,14 @@
 def muncul_sekali(angka):
-    return []
+    counts = {} 
+    for num in angka:
+        num_int = int(num)
+        if num_int in counts:
+            counts[num_int] += 1
+        else:
+            counts[num_int] = 1
+
+    return [key for key, value in counts.items() if value == 1]
+
 
 if __name__ == '__main__':
     print(muncul_sekali("1234123")) # [4]

@@ -1,7 +1,6 @@
 def join_array_remove_duplicate(arrayA, arrayB):
     # your code here
-    return []
-
+    return list(set(arrayA + arrayB))
 if __name__ == '__main__':
     # Test cases
     print(join_array_remove_duplicate(["apel", "anggur"], ["lemon", "leci", "nanas"]))
